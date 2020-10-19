@@ -3,7 +3,7 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick a Node version: 10, 12, 14
-		"args": { "VARIANT": "12" }
+		"args": { "VARIANT": "14" }
 	},
 
 	// Set *default* container specific settings.json values on container create.
@@ -26,7 +26,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install -g gatsby-cli"
+	"postCreateCommand": "nvm install 12 && nvm use 12 && npm install -g gatsby-cli"
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "node"
